@@ -12,8 +12,9 @@ const setupConnection = async (req, res) => {
 
 const startStream = async (req, res) => {
     try {
-        const { streamId, input, twinId } = req.body;
-        const response = await StreamService.startStream(streamId, input, twinId);
+        const { streamId, input, twinId, sessionId } = req.body;
+        console.log(req.body)
+        const response = await StreamService.startStream(streamId, input, twinId, sessionId);
         return res.json(response);
     } catch (error) {
         return res.status(500).json({ message: error.message });
@@ -23,6 +24,7 @@ const startStream = async (req, res) => {
 const startConnection = async (req, res) => {
     try {
         const { streamId, answer, sessionId } = req.body;
+        // console.log(req.body)
         const response = await StreamService.startConnection(streamId, answer, sessionId);
         return res.json(response);
     } catch (error) {
@@ -32,8 +34,9 @@ const startConnection = async (req, res) => {
 
 const sendNetworkInfo = async (req, res) => {
     try {
-        const { streamId, sessionId, event } = req.body;
-        const response = await StreamService.sendNetworkInfo(streamId, sessionId, event);
+        const { streamId, sessionId, candidate, sdpMid, sdpMLineIndex } = req.body;
+        // console.log(req.body)
+        const response = await StreamService.sendNetworkInfo(streamId, sessionId, candidate, sdpMid, sdpMLineIndex);
         return res.json(response);
     } catch (error) {
         return res.status(500).json({ message: error.message });

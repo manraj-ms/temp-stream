@@ -22,9 +22,9 @@ class StreamService {
     }
   }
 
-  async startStream(streamId, input, twinId) {
+  async startStream(streamId, input, twinId, sessionId) {
     try{
-        const response = await this.twinProtocol.startStream(streamId, input, twinId)
+        const response = await this.twinProtocol.startStream(streamId, input, twinId, sessionId)
         return response
     }
     catch(error){
@@ -42,9 +42,9 @@ class StreamService {
     }
   }
 
-  async sendNetworkInfo(streamId, sessionId, event) {
+  async sendNetworkInfo(streamId, sessionId, candidate, sdpMid, sdpMLineIndex) {
     try{
-        const response = await this.twinProtocol.sendNetworkInfo(streamId, sessionId, event)
+        const response = await this.twinProtocol.sendNetworkInfo(streamId, sessionId, candidate, sdpMid, sdpMLineIndex)
         return response
     }
     catch(error){
