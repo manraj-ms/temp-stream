@@ -1,17 +1,17 @@
-import TwinProtocol from "twin-protocol-dev";
+import TwinProtocol from "twin-protocol-staging";
 import dotenv from "dotenv";
 dotenv.config();
 
 class StreamService {
   constructor() {
     this.twinProtocol = new TwinProtocol({
-      accessKey: process.env.ACCESS_KEY,
-      secretKey: process.env.ACCESS_KEY,
-      clientId: process.env.CLIENT_ID,
+      accessKey: process.env.TP_ACCESS_KEY,
+      secretKey: process.env.TP_SECRET_KEY,
+      clientId: process.env.TP_CLIENT_ID,
     });
   }
 
-  async setupConnection(twinId, responseResolution) {
+  async setupConnection(twinId,responseResolution) {
 
     try{
         const response = await this.twinProtocol.setupConnection(twinId, responseResolution)

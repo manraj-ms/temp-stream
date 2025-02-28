@@ -13,7 +13,7 @@ const setupConnection = async (req, res) => {
 const startStream = async (req, res) => {
     try {
         const { streamId, input, twinId, sessionId } = req.body;
-        console.log(req.body)
+        // console.log(req.body)
         const response = await StreamService.startStream(streamId, input, twinId, sessionId);
         return res.json(response);
     } catch (error) {
