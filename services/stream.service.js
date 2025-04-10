@@ -8,7 +8,8 @@ class StreamService {
       accessKey: process.env.TP_ACCESS_KEY,
       secretKey: process.env.TP_SECRET_KEY,
       clientId: process.env.TP_CLIENT_ID,
-      baseUrl: process.env.TP_CLIENT_ID
+      baseUrl: process.env.TP_BASE_URL,
+      wsUrl: process.env.TP_WS_URL
     });
   }
 
@@ -16,7 +17,6 @@ class StreamService {
 
     try{
         const response = await this.twinProtocol.setupConnection(twinId, responseResolution)
-        console.log(response, 19)
         return response
     }
     catch(error){
@@ -27,6 +27,7 @@ class StreamService {
   async startStream(streamId, input, twinId, sessionId) {
     try{
         const response = await this.twinProtocol.startStream(streamId, input, twinId, sessionId)
+        console.log(response, 30)
         return response
     }
     catch(error){
