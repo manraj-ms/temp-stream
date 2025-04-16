@@ -43,6 +43,7 @@ class StreamService {
         return response
     }
     catch(error){
+      console.log(error, 46)
         throw new Error(error.message)
     }
   }
