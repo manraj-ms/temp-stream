@@ -13,10 +13,11 @@ class StreamService {
     });
   }
 
-  async setupConnection(twinId,responseResolution) {
-
+  async setupConnection(twinId,responseResolution, session_timeout) {
+    console.log("hello")
     try{
-        const response = await this.twinProtocol.setupConnection(twinId, responseResolution)
+        const response = await this.twinProtocol.setupConnection(twinId, responseResolution, session_timeout)
+        console.log(response, 19)
         return response
     }
     catch(error){
@@ -38,6 +39,7 @@ class StreamService {
   async startConnection(streamId, answer, sessionId) {
     try{
         const response = await this.twinProtocol.startConnection(streamId, answer, sessionId)
+        console.log(startConnection, 42)
         return response
     }
     catch(error){
