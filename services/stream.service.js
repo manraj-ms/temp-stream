@@ -39,12 +39,12 @@ class StreamService {
   async startConnection(streamId, answer, sessionId) {
     try{
         const response = await this.twinProtocol.startConnection(streamId, answer, sessionId)
-        console.log(startConnection, 42)
+        console.log(response, 42)
         return response
     }
     catch(error){
       console.log(error, 46)
-        throw new Error(error.message)
+        // throw new Error(error.message)
     }
   }
 
