@@ -13,10 +13,10 @@ class StreamService {
     });
   }
 
-  async setupConnection(twinId,responseResolution, session_timeout) {
+  async setupConnection(twinId, responseResolution, stitch, session_timeout) {
     console.log("hello")
     try{
-        const response = await this.twinProtocol.setupConnection(twinId, responseResolution, session_timeout)
+        const response = await this.twinProtocol.setupConnection(twinId, responseResolution, stitch, session_timeout)
         console.log(response, 19)
         return response
     }
