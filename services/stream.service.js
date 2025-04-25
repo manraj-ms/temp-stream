@@ -16,7 +16,7 @@ class StreamService {
   async setupConnection(twinId, responseResolution, stitch, session_timeout) {
     console.log("hello")
     stitch = true
-    session_timeout = 100
+    session_timeout = 300
     try{
         const response = await this.twinProtocol.setupConnection(twinId, responseResolution, stitch, session_timeout)
         console.log(response, 19)
