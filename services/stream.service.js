@@ -1,4 +1,4 @@
-import TwinProtocol from "twin-protocol-staging";
+import TwinProtocol from "twin-protocol-prod";
 import dotenv from "dotenv";
 dotenv.config();
 
