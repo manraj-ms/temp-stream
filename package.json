@@ -16,6 +16,7 @@
     "express": "^4.21.2",
     "helmet": "^8.0.0",
     "nodemon": "^3.1.9",
-    "twin-protocol-prod": "^2.0.0"
+    "twin-protocol-prod": "^2.0.0",
+    "twin-protocol-staging": "^1.2.3"
   }
 }
