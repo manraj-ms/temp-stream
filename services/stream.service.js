@@ -1,4 +1,4 @@
-import TwinProtocol from "twin-protocol-prod";
+import TwinProtocol from "twin-protocol-staging";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -10,16 +10,16 @@ class StreamService {
       // TP_CLIENT_ID: process.env.TP_CLIENT_ID,
       // TP_BASE_URL: process.env.TP_BASE_URL,
       // TP_WS_URL: process.env.TP_WS_URL,
-      // accessKey: process.env.TP_ACCESS_KEY,
-      // secretKey: process.env.TP_SECRET_KEY,
-      // clientId: process.env.TP_CLIENT_ID,
-      // baseUrl: process.env.TP_BASE_URL,
-      // wsUrl: process.env.TP_WS_URL,
-      TP_ACCESS_KEY: "8345731fb49949ff2276ac972931d188",
-      TP_SECRET_KEY: "a8cd32d0d5435610298c4fe2bcc3cf3a897b2f2bf33bd89103ca8084e7c869c0",
-      TP_CLIENT_ID: "67e237c2fe1b649615e6cbd4",
-      TP_BASE_URL: "https://sdk.twinprotocol.ai/",
-      TP_WS_URL: "wss://sdk.twinprotocol.ai/"
+      accessKey: process.env.TP_ACCESS_KEY,
+      secretKey: process.env.TP_SECRET_KEY,
+      clientId: process.env.TP_CLIENT_ID,
+      baseUrl: process.env.TP_BASE_URL,
+      wsUrl: process.env.TP_WS_URL,
+      // TP_ACCESS_KEY: "8345731fb49949ff2276ac972931d188",
+      // TP_SECRET_KEY: "a8cd32d0d5435610298c4fe2bcc3cf3a897b2f2bf33bd89103ca8084e7c869c0",
+      // TP_CLIENT_ID: "67e237c2fe1b649615e6cbd4",
+      // TP_BASE_URL: "https://sdk.twinprotocol.ai/",
+      // TP_WS_URL: "wss://sdk.twinprotocol.ai/"
     });
   }
 
