@@ -5,21 +5,16 @@ dotenv.config();
 class StreamService {
   constructor() {
     this.twinProtocol = new TwinProtocol({
-      // TP_ACCESS_KEY: process.env.TP_ACCESS_KEY,
-      // TP_SECRET_KEY: process.env.TP_SECRET_KEY,
-      // TP_CLIENT_ID: process.env.TP_CLIENT_ID,
-      // TP_BASE_URL: process.env.TP_BASE_URL,
-      // TP_WS_URL: process.env.TP_WS_URL,
-      accessKey: "urW5Be7TH79CwX1mqciARxnvI6iF5b51",
-      secretKey: "493KulisjFLfvaY6DJlTWCzgu4G7xyHDnmcXGWMdT0Xy2l4KLk53LCUli3DmUj",
-      clientId: "6799d287076370f267783d79",
-      baseUrl: "https://stagingsdk.twns.ai/",
-      wsUrl: "wss://stagingsdk.twns.ai/ws/"
-      // TP_ACCESS_KEY: "8345731fb49949ff2276ac972931d188",
-      // TP_SECRET_KEY: "a8cd32d0d5435610298c4fe2bcc3cf3a897b2f2bf33bd89103ca8084e7c869c0",
-      // TP_CLIENT_ID: "67e237c2fe1b649615e6cbd4",
-      // TP_BASE_URL: "https://sdk.twinprotocol.ai/",
-      // TP_WS_URL: "wss://sdk.twinprotocol.ai/"
+      TP_ACCESS_KEY: process.env.TP_ACCESS_KEY,
+      TP_SECRET_KEY: process.env.TP_SECRET_KEY,
+      TP_CLIENT_ID: process.env.TP_CLIENT_ID,
+      TP_BASE_URL: process.env.TP_BASE_URL,
+      TP_WS_URL: process.env.TP_WS_URL
+      // accessKey: process.env.TP_ACCESS_KEY,
+      // secretKey: process.env.TP_SECRET_KEY,
+      // clientId: process.env.TP_CLIENT_ID,
+      // baseUrl: process.env.TP_BASE_URL,
+      // wsUrl: process.env.TP_WS_URL
     });
   }
 
